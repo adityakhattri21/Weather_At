@@ -73,7 +73,7 @@ func main() {
 		if date.Before(time.Now()) {
 			continue
 		}
-		message := fmt.Sprintf("%s - %0.1fC, %0.1f %s", date.Format("15:04"), hour.TempC, hour.ChanceOfRain, hour.Condition.Text)
+		message := fmt.Sprintf("%s - %0.1fC, %0.1f%% %s", date.Format("15:04"), hour.TempC, hour.ChanceOfRain, hour.Condition.Text)
 
 		if hour.ChanceOfRain < 40 {
 			fmt.Println(message)
